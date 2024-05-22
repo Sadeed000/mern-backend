@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "backend": "nodemon backend/index.js",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend"
+    "dev":  "npm run backend"
   },
   "author": "",
   "license": "ISC",
