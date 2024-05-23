@@ -7,22 +7,18 @@ const router = require('./routes')
 
 
 const app = express()
-const fileupload = require('express-fileupload'); 
+const fileupload = require('express-fileupload');   
 
 app.use(fileupload({useTempFiles: true}))
 const corsOptions = {
     origin: 'https://mern-frontend-beryl-kappa.vercel.app', // specify your client's origin
     credentials: true, // allow credentials (cookies, etc.)
   };
-app.use(cors(corsOptions));
-
-app.options('*', cors(corsOptions)); // preflight OPTIONS request
-
-// app.use(cors({
-//     origin: '',
-//     credentials: true
-//   }));
-//   app.use(cors());
+app.use(cors({
+    origin: 'https://mern-frontend-beryl-kappa.vercel.app',
+    credentials: true
+  }));
+  app.use(cors());
 
 
 // const corsOptions ={
@@ -31,6 +27,7 @@ app.options('*', cors(corsOptions)); // preflight OPTIONS request
 //    optionSuccessStatus:200,
 // }
 
+  app.use(cors(corsOptions));
   
 
 // app.use(cors({
@@ -38,7 +35,9 @@ app.options('*', cors(corsOptions)); // preflight OPTIONS request
 //     credentials : true
 // }))
 
-
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
+});
 app.use(express.json())
 app.use(cookieParser())
 
