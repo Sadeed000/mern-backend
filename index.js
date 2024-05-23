@@ -10,23 +10,24 @@ const app = express()
 const fileupload = require('express-fileupload'); 
 
 app.use(fileupload({useTempFiles: true}))
-const corsOptions = {
-    origin: '', // specify your client's origin
-    credentials: true, // allow credentials (cookies, etc.)
-  };
+// const corsOptions = {
+//     origin: '', // specify your client's origin
+//     credentials: true, // allow credentials (cookies, etc.)
+//   };
 app.use(cors({
-    origin: '',
+    origin: 'http://localhost:3000',
     credentials: true
   }));
   app.use(cors());
 
 
-// const corsOptions ={
-//    origin:'', 
-//    credentials:true,            //access-control-allow-credentials:true
-//    optionSuccessStatus:200,
-// }
+const corsOptions ={
+   origin:'http://localhost:3000', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
+  app.use(cors(corsOptions));
   app.use(cors(corsOptions));
   
 
