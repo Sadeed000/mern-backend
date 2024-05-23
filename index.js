@@ -38,9 +38,7 @@ app.options('*', cors(corsOptions)); // preflight OPTIONS request
 //     credentials : true
 // }))
 
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
-});
+
 app.use(express.json())
 app.use(cookieParser())
 
