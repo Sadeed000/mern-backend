@@ -18,6 +18,11 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.use(cors({
+    origin: 'https://mern-frontend-nnqw.vercel.app',
+    credentials: true
+  }));
+  app.use(cors());
 
 app.options('*', cors(corsOptions));
 
