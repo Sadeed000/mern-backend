@@ -1,4 +1,3 @@
-
 const express = require('express')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
@@ -10,30 +9,23 @@ const router = require('./routes')
 const app = express()
 const fileupload = require('express-fileupload');   
 
-
-
+app.use(fileupload({useTempFiles: true}))
 const corsOptions = {
-    origin: 'https://mern-frontend-bzis.vercel.app', // Replace this with your frontend URL
-    credentials: true // Allow credentials (cookies, HTTP authentication)
-};
+    origin: 'http://localhost:3000', // specify your client's origin
+    credentials: true, // allow credentials (cookies, etc.)
+  };
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  }));
+  app.use(cors());
 
-app.use(cors(corsOptions));
-
-app.options('*', cors(corsOptions));
 
 
-// const corsOptions ={
-//    origin:'http://localhost:3000', 
-//    credentials:true,            //access-control-allow-credentials:true
-//    optionSuccessStatus:200,
-// }
 
+  app.use(cors(corsOptions));
   
 
-// app.use(cors({
-//     origin : `http://localhost:4000`,
-//     credentials : true
-// }))
 
 
 app.use(express.json())
