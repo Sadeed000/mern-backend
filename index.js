@@ -13,7 +13,7 @@ const fileupload = require('express-fileupload');
 
 
 const corsOptions = {
-    origin: 'https://mern-frontend-nnqw.vercel.app', // Replace this with your frontend URL
+    origin: 'https://mern-frontend-bzis.vercel.app', // Replace this with your frontend URL
     credentials: true // Allow credentials (cookies, HTTP authentication)
 };
 
