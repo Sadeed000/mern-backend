@@ -10,12 +10,12 @@ const app = express()
 const fileupload = require('express-fileupload'); 
 
 app.use(fileupload({useTempFiles: true}))
-// const corsOptions = {
-//     origin: 'http://localhost:3000', // specify your client's origin
-//     credentials: true, // allow credentials (cookies, etc.)
-//   };
+const corsOptions = {
+    origin: '', // specify your client's origin
+    credentials: true, // allow credentials (cookies, etc.)
+  };
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '',
     credentials: true
   }));
   app.use(cors());
