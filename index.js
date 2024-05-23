@@ -18,11 +18,11 @@ app.use(cors(corsOptions));
 
 app.options('*', cors(corsOptions)); // preflight OPTIONS request
 
-app.use(cors({
-    origin: '',
-    credentials: true
-  }));
-  app.use(cors());
+// app.use(cors({
+//     origin: '',
+//     credentials: true
+//   }));
+//   app.use(cors());
 
 
 // const corsOptions ={
