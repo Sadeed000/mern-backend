@@ -14,6 +14,8 @@ const corsOptions = {
     origin: 'https://mern-frontend-nnqw.vercel.app', // specify your client's origin
     credentials: true, // allow credentials (cookies, etc.)
   };
+  app.use(cors(corsOptions));
+
 app.use(cors({
     origin: 'https://mern-frontend-nnqw.vercel.app',
     credentials: true
@@ -27,7 +29,6 @@ app.use(cors({
 //    optionSuccessStatus:200,
 // }
 
-  app.use(cors(corsOptions));
   
 
 // app.use(cors({
