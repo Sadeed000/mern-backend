@@ -24,7 +24,6 @@ app.use(cors({
   }));
   app.use(cors());
 
-app.options('*', cors(corsOptions));
 
 app.use(express.json()); // Parse JSON bodie
 
