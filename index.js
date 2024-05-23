@@ -10,7 +10,7 @@ const app = express()
 const fileupload = require('express-fileupload');   
 
 app.use(fileupload({useTempFiles: true}))
-onst corsOptions = {
+const corsOptions = {
     origin: 'https://mern-frontend-nnqw.vercel.app', // Your frontend URL
     credentials: true, // Allow credentials
     optionsSuccessStatus: 200 // Some legacy browsers choke on 204
