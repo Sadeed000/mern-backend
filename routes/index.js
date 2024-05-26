@@ -57,7 +57,7 @@ router.post("/filter-product",filterProductController)
 //user add to cart
 router.post("/addtocart",addToCartController)
 router.get("/countAddToCartProduct",authToken,countAddToCartProduct)
-router.get("/view-card-product",authToken,addToCartViewProduct)
+router.get("/view-card-product",addToCartViewProduct)
 router.post("/update-cart-product",authToken,updateAddToCartProduct)
 router.post("/delete-cart-product",authToken,deleteAddToCartProduct)
 
