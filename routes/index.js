@@ -59,7 +59,6 @@
 
 
 // module.exports = router
-
 const express = require('express')
 
 const router = express.Router()
@@ -88,16 +87,17 @@ const filterProductController = require('../controller/product/filterProduct')
 
 
 router.post("/signup",userSignUpController)
-router.post("/signin",userSignInController)
+router.post('/signin', userSignInController)
 router.get("/user-details",authToken,userDetailsController)
 router.get("/userLogout",userLogout)
 
 //admin panel 
+
 router.get("/all-user",authToken,allUsers)
-router.post("/update-user",authToken,updateUser)
+router.post("/update-user/:id",authToken,updateUser)
 
 //product
-router.post("/upload-product",authToken,UploadProductController)
+router.post("/upload-product",UploadProductController)
 router.get("/get-product",getProductController)
 router.post("/update-product",authToken,updateProductController)
 router.get("/get-categoryProduct",getCategoryProduct)
