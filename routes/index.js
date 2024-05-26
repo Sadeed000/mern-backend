@@ -56,10 +56,10 @@ router.post("/filter-product",filterProductController)
 
 //user add to cart
 router.post("/addtocart",addToCartController)
-router.get("/countAddToCartProduct",authToken,countAddToCartProduct)
+router.get("/countAddToCartProduct",countAddToCartProduct)
 router.get("/view-card-product",addToCartViewProduct)
-router.post("/update-cart-product",authToken,updateAddToCartProduct)
-router.post("/delete-cart-product",authToken,deleteAddToCartProduct)
+router.post("/update-cart-product",updateAddToCartProduct)
+router.post("/delete-cart-product",deleteAddToCartProduct)
 
 
 
