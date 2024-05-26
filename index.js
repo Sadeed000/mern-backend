@@ -11,11 +11,11 @@ const fileupload = require('express-fileupload');
 
 app.use(fileupload({useTempFiles: true}))
 const corsOptions = {
-    origin: 'https://mern-client-tau.vercel.app', // specify your client's origin
+    origin: 'https://mern-client2.vercel.app', // specify your client's origin
     credentials: true, // allow credentials (cookies, etc.)
   };
 app.use(cors({
-    origin: 'https://mern-client-tau.vercel.app',
+    origin: 'https://mern-client2.vercel.app',
     credentials: true
   }));
   app.use(cors());
